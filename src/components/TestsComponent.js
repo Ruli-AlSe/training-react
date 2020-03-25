@@ -16,7 +16,7 @@ class TestsComponent extends React.Component {
     counter: 0
   };
 
-  add() {
+  add = () => {
     //this.counter += 1;
     //this.state.counter += 1;
     this.setState({
@@ -24,7 +24,7 @@ class TestsComponent extends React.Component {
     });
   }
 
-  subtrac() {
+  subtrac = () => {
     this.setState({
       counter: (this.state.counter - 1)
     });
@@ -44,8 +44,8 @@ class TestsComponent extends React.Component {
           {'Counter: ' + this.state.counter }
         </p>
         <p>
-          <input type="button" value="add" onClick={ this.add.bind(this) } />
-          <input type="button" value="subtrac" onClick={ this.subtrac.bind(this) } />
+          <input type="button" value="add" onClick={ this.add } />
+          <input type="button" value="subtrac" onClick={ this.subtrac } />
         </p>
       </section>
     );
