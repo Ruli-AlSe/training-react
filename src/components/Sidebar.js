@@ -5,18 +5,18 @@ class Sidebar extends React.Component {
     return (
       <aside id="sidebar">
         <div id="nav-blog" className="sidebar-item">
-          <h3>Puedes hacer esto</h3>
+          <h3>You can do this...</h3>
           <a href="#" className="btn btn-success">
-            Crear artículo
+            New article
           </a>
         </div>
 
         <div id="search" className="sidebar-item">
-          <h3>Buscador</h3>
-          <p>Encuentra el artículo que buscas</p>
+          <h3>Browser</h3>
+          <p>Find the article you are looking for</p>
           <form>
             <input type="text" name="search" />
-            <input type="submit" name="submit" value="Buscar" className="btn" />
+            <input type="submit" name="submit" value="Search" className="btn" />
           </form>
         </div>
       </aside>

@@ -14,7 +14,7 @@ class Header extends React.Component {
               alt="Logotipo"
             />
             <span id="brand">
-              <strong>Curso</strong>React
+              <strong>ReactJS</strong> Course
             </span>
           </div>
 
@@ -22,19 +22,19 @@ class Header extends React.Component {
           <nav id="menu">
             <ul>
               <li>
-                <a href="index.html">Inicio</a>
+                <a href="index.html">Home</a>
               </li>
               <li>
                 <a href="blog.html">Blog</a>
               </li>
               <li>
-                <a href="formulario.html">Formulario</a>
+                <a href="formulario.html">Form</a>
               </li>
               <li>
-                <a href="#">Pagina 1</a>
+                <a href="#">Page 1</a>
               </li>
               <li>
-                <a href="#">Pagina 2</a>
+                <a href="#">Page 2</a>
               </li>
             </ul>
           </nav>

@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "./assets/images/logo.svg";
 import "./assets/css/App.css";
 
 import TestsComponent from "./components/TestsComponent";
@@ -9,10 +8,12 @@ import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 
 function App() {
+  var titleSlider = 'A little Blog made with ReactJS';
+  var titleBtn = 'See more';
   return (
     <div className="App">
       <Header />
-      <Slider />
+      <Slider title={titleSlider} btnText={titleBtn} />
       <div className="center">
 
         <TestsComponent />

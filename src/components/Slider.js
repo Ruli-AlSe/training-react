@@ -5,10 +5,10 @@ class Slider extends React.Component {
     return (
       <div id="slider" className="slider-big">
         <h1>
-          Bienvenido al Curso de React con Víctor Robles de victorroblesweb.es
+          { this.props.title }
         </h1>
         <a href="#" className="btn-white">
-          Ir al blog
+          { this.props.btnText }
         </a>
       </div>
     );
