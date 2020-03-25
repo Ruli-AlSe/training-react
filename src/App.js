@@ -1,23 +1,25 @@
-import React from 'react';
-import logo from './assets/images/logo.svg';
-import './assets/css/App.css';
+import React from "react";
+import logo from "./assets/images/logo.svg";
+import "./assets/css/App.css";
 
-import MyComponent from './components/MyComponent';
-import Movies from './components/Movies';
+import TestsComponent from "./components/TestsComponent";
+import Header from "./components/Header";
+import Slider from "./components/Slider";
+import Sidebar from "./components/Sidebar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-      <section className="components">
-        <MyComponent />
-        <Movies />
-      </section>
+      <Header />
+      <Slider />
+      <div className="center">
+
+        <TestsComponent />
+        <Sidebar />
+      </div>
+      <div className="clearfix" />
+      <Footer />
     </div>
   );
 }
