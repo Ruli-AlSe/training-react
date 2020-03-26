@@ -1,5 +1,6 @@
 import React from "react";
-import logo from '../assets/images/logo.svg'
+import logo from "../assets/images/logo.svg";
+import { NavLink } from "react-router-dom";
 
 class Header extends React.Component {
   render() {
@@ -8,11 +9,7 @@ class Header extends React.Component {
         <div className="center">
           {/*<!-- LOGO -->*/}
           <div id="logo">
-            <img
-              src={logo}
-              className="app-logo"
-              alt="Logotipo"
-            />
+            <img src={logo} className="app-logo" alt="Logotipo" />
             <span id="brand">
               <strong>ReactJS</strong> Course
             </span>
@@ -22,19 +19,19 @@ class Header extends React.Component {
           <nav id="menu">
             <ul>
               <li>
-                <a href="index.html">Home</a>
+                <NavLink to="/home" activeClassName="active" >Home</NavLink>
               </li>
               <li>
-                <a href="blog.html">Blog</a>
+                <NavLink to="/blog">Blog</NavLink>
               </li>
               <li>
-                <a href="formulario.html">Form</a>
+                <NavLink to="/form">Form</NavLink>
               </li>
               <li>
-                <a href="#">Page 1</a>
+                <NavLink to="/page1">Page 1</NavLink>
               </li>
               <li>
-                <a href="#">Page 2</a>
+                <NavLink to="/page2">Page 2</NavLink>
               </li>
             </ul>
           </nav>
