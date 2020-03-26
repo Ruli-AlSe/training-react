@@ -1,13 +1,39 @@
-import React, {Component} from 'react';
-import StaticMessage from './StaticMessage';
-
+import React, { Component } from "react";
+import Movie from './Movie'
 
 class Movies extends Component {
+  state = {
+    movies: [
+      {
+        title: "Batman VS Superman",
+        image:
+          "https://cdn1.cinemascomics.com/wp-content/uploads/2015/08/batman-vs-superman-e1482859018981.jpeg"
+      },
+      {
+        title: "Fast and Furious 4",
+        image: "https://cyberd.org/img/3/Fast-And-Furious-4-2009.jpg"
+      },
+      {
+        title: "Pirates of the Caribbean 1",
+        image:
+          "https://lumiere-a.akamaihd.net/v1/images/r_piratesofthecaribbeanthecurseoftheblackpearl_header_m_7295e90c.jpeg?region=0,0,640,400"
+      }
+    ],
+    name: "Raul Almanza"
+  };
+
   render() {
-    return(
-      <div>
-        <h1>This is a movies component</h1>
-        <StaticMessage />
+    return (
+      <div id="content" className="movies">
+        <h2 className="subheader">Movies</h2>
+        <p>{this.state.name}'s favorite movies </p>
+        <div id="articles" className="movies">
+          {this.state.movies.map((movie, i) => {
+            return (
+              <Movie key={ i } movie={ movie } />
+            );
+          })}
+        </div>
       </div>
     );
   }

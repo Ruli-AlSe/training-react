@@ -1,6 +1,5 @@
 import React from "react";
 import MyComponent from "./MyComponent";
-import Movies from "./Movies";
 
 class TestsComponent extends React.Component {
 /*
@@ -36,7 +35,6 @@ class TestsComponent extends React.Component {
         <h2 className="subheader">Latest articles</h2>
         <section className="components">
           <MyComponent />
-          <Movies />
         </section>
 
         <h2 className="subheader">React States</h2>
