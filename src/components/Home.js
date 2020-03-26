@@ -10,7 +10,7 @@ class Home extends React.Component {
 
     return(
       <div id="home">
-        <Slider title={titleSlider} btnText={titleBtn} />
+        <Slider title={titleSlider} btnText={titleBtn} size="slider-big" />
         <div className="center">
           <div id="content" >
             <h2 className="subheader">Latest articles</h2>

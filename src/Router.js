@@ -7,6 +7,7 @@ import NotFound from "./components/NotFound";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import Blog from "./components/Blog";
 
 class Router extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class Router extends React.Component {
         <Header />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/blog" component={Blog} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/page1" component={Movies} />
             <Route component={NotFound} />

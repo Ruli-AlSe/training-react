@@ -4,12 +4,14 @@ class Sidebar extends React.Component {
   render() {
     return (
       <aside id="sidebar">
-        <div id="nav-blog" className="sidebar-item">
-          <h3>You can do this...</h3>
-          <a href="#" className="btn btn-success">
-            New article
-          </a>
-        </div>
+        {this.props.blog === "true" &&
+          <div id="nav-blog" className="sidebar-item">
+            <h3>You can do this...</h3>
+            <a href="#" className="btn btn-success">
+              New article
+            </a>
+          </div>
+        }
 
         <div id="search" className="sidebar-item">
           <h3>Browser</h3>
