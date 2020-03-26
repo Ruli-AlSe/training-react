@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Movie from './Movie'
+import Movie from "./Movie";
 
 class Movies extends Component {
   state = {
@@ -19,19 +19,36 @@ class Movies extends Component {
           "https://lumiere-a.akamaihd.net/v1/images/r_piratesofthecaribbeanthecurseoftheblackpearl_header_m_7295e90c.jpeg?region=0,0,640,400"
       }
     ],
-    name: "Raul Almanza"
+    name: "Raul Almanza",
+    starredMovie: {}
+  };
+
+  starred = movie => {
+    this.setState({
+      starredMovie: movie
+    });
   };
 
   render() {
+    var pStyle = {
+      background: 'green',
+      color: 'white',
+      padding: '10px'
+    };
+
     return (
       <div id="content" className="movies">
         <h2 className="subheader">Movies</h2>
+        {this.state.starredMovie.title && (
+          <p className="starred" style={ pStyle }>
+            <strong>Starred film: </strong>
+            <span>{this.state.starredMovie.title}</span>
+          </p>
+        )}
         <p>{this.state.name}'s favorite movies </p>
         <div id="articles" className="movies">
           {this.state.movies.map((movie, i) => {
-            return (
-              <Movie key={ i } movie={ movie } />
-            );
+            return <Movie key={i} movie={movie} starred={this.starred} />;
           })}
         </div>
       </div>
