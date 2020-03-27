@@ -2,11 +2,12 @@ import React from "react";
 
 class Movie extends React.Component {
   setStarred = () => {
-    this.props.starred(this.props.movie)
-  }
+    this.props.starred(this.props.movie);
+  };
 
   render() {
     const { title, image } = this.props.movie;
+
     return (
       <article className="article-item" id="article-template">
         <div className="image-wrap">
