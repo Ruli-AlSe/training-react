@@ -2,6 +2,7 @@ import React from 'react';
 
 import Slider from './Slider';
 import Sidebar from './Sidebar';
+import Articles from './Articles';
 
 class Blog extends React.Component {
   render() {
@@ -13,6 +14,7 @@ class Blog extends React.Component {
         <div className="center">
           <div id="content" >
             { /* Articles list from API */ }
+            <Articles />
           </div>
           <Sidebar blog="true" />
         </div>
