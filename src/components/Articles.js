@@ -1,7 +1,8 @@
-import React from "react";
-import axios from "axios";
-import Global from "../Global";
-import Moment from "react-moment";
+import React from 'react';
+import {Link} from 'react-router-dom';
+import axios from 'axios';
+import Global from '../Global';
+import Moment from 'react-moment';
 //import 'moment/locale/es';
 
 import defImg from "../assets/images/images.png";
@@ -56,7 +57,7 @@ class Articles extends React.Component {
             <span className="date">
               <Moment fromNow >{ article.date }</Moment>
             </span>
-            <a href="#">Leer más</a>
+            <Link to={ '/blog/article/' + article._id } >Leer más</Link>
 
             <div className="clearfix"></div>
           </article>

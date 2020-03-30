@@ -23,6 +23,9 @@ class Router extends React.Component {
             <Route exact path="/form" component={Form} />
             <Route exact path="/movies" component={Movies} />
             <Route exact path="/tests" component={MyComponent} />
+            <Route exact path="/blog/article/:id" render={() => (
+              <h1>Blog Article</h1>
+            )} />
             <Route component={NotFound} />
           </Switch>
         <div className="clearfix" />
