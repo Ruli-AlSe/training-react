@@ -17,12 +17,18 @@ class Articles extends React.Component {
   };
 
   componentWillMount() {
-    this.getArticles();
+    var home = this.props.home;
+    if (home === 'true') {
+      var complementUrl = 'articles/get-articles/last-five';
+    } else {
+      var complementUrl = 'articles/get-articles';
+    }
+    this.getArticles(complementUrl);
   }
 
-  getArticles = () => {
+  getArticles = (complementUrl) => {
     axios
-      .get(this.url + "articles/get-articles")
+      .get(this.url + complementUrl)
       .then(response => {
         this.setState({
           articles: response.data.articles,
