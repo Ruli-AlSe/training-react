@@ -1,7 +1,12 @@
 import React from "react";
 import axios from "axios";
+import Global from "../Global";
+
+import defImg from "../assets/images/images.png";
 
 class Articles extends React.Component {
+  url = Global.url;
+
   state = {
     articles: {},
     status: null,
@@ -14,7 +19,7 @@ class Articles extends React.Component {
 
   getArticles = () => {
     axios
-      .get("http://localhost:5000/api/articles/get-articles")
+      .get(this.url + "articles/get-articles")
       .then(response => {
         this.setState({
           articles: response.data.articles,
@@ -27,14 +32,22 @@ class Articles extends React.Component {
   render() {
     if (this.state.status === "success") {
 
-      var listArticles = this.state.articles.map(article => {
+      var listArticles = this.state.articles.map((article, i) => {
         return (
-          <article className="article-item" id="article-template">
+          <article className="article-item" id="article-template" key={i}>
             <div className="image-wrap">
-              <img
-                src="https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8"
-                alt="Paisaje"
-              />
+              {article.image !== null ? (
+                  <img
+                    src={ this.url + 'articles/image/' + article.image }
+                    alt={ article.title }
+                  />
+                ) : (
+                  <img
+                    src={ defImg }
+                    alt="landscape"
+                  />
+                )
+              }
             </div>
 
             <h2>{ article.title }</h2>
